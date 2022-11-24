@@ -1,0 +1,19 @@
+{
+  "name": "@webxauth/ui-react-native",
+  "version": "1.0.0",
+  "main": "module/dist/index.js",
+  "scripts": {
+    "module:setup": "cd module && yarn",
+    "module:build": "cd module && yarn build",
+    "module:prepare": "cd module && yarn prepare",
+    "": "",
+    "sample:setup": "cd sample && yarn",
+    "sample:start": "npm run module:build && cd sample/ && expo start",
+    "sample:android": "npm run module:build && cd sample/ && expo start --android",
+    "sample:ios": "npm module:build && cd sample/ && expo start --ios",
+    "sample:web": "npm module:build && cd sample/ && expo start --web"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true
+}

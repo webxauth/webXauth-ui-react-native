@@ -1,0 +1,32 @@
+{
+  "name": "@webxauth/ui-react-native",
+  "version": "1.0.0",
+  "description": "webxauth for React Native",
+  "keywords": [
+    "react-native",
+    "expo"
+  ],
+  "author": "Oliver Molnar <403access@olimo.me>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "yarn run build"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-native": "^0.70.7",
+    "react-native-unimodules": "^0.14.10",
+    "typescript": "^4.9.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+  }
+}
