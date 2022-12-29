@@ -37,7 +37,7 @@ export default function App() {
       onPostMessage={onPostMessage}
       onError={onErrorAuthWebView}
       delay={1000}
-      backgroundColor={'#eaeaea'}
+      backgroundColor='#eaeaea'
       dependencies={[]}
     />
   )
