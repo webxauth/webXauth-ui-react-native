@@ -2,8 +2,7 @@
  *     Webview
  */
 
-import type { WebViewMessageEvent } from "react-native-webview"
-
+import type { WebViewMessageEvent } from 'react-native-webview'
 
 export type WebViewMessageBrokerConfig = {
   onPostMessage?: (message: WebViewMessage) => Promise<boolean>
@@ -36,7 +35,8 @@ class MessageBroker {
       const stringifiedData = event.nativeEvent.data
       const message = JSON.parse(stringifiedData) as WebViewMessage
 
-      const continueToProcess = this.config.onPostMessage && await this.config.onPostMessage(message)
+      const continueToProcess =
+        this.config.onPostMessage && (await this.config.onPostMessage(message))
       if (continueToProcess !== true) return
 
       if (message.type === 'action') {
@@ -49,7 +49,7 @@ class MessageBroker {
         else throw new Error('No data handler found.')
       }
       // else throw new Error(`Unknown message type '${message.type}'.`)
-      this.config.onPostMessage && await this.config.onPostMessage(message)
+      this.config.onPostMessage && (await this.config.onPostMessage(message))
     } catch (e) {
       this.config.onError(e)
     }

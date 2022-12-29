@@ -1,2 +1,2 @@
-export * from './AuthWebView';
-export * from './utils/WebViewMessageBroker';
+export * from './AuthWebView'
+export * from './utils/WebViewMessageBroker'

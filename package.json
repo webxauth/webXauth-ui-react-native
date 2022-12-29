@@ -74,7 +74,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
     "pod-install": "^0.1.0",
-    "prettier": "^2.0.5",
+    "prettier": "^2.8.1",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-builder-bob": "^0.20.3",
@@ -145,11 +145,13 @@
     "lib/"
   ],
   "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
+    "printWidth": 100,
     "tabWidth": 2,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "bracketSameLine": true,
     "trailingComma": "es5",
-    "useTabs": false
+    "semi": false
   },
   "react-native-builder-bob": {
     "source": "src",

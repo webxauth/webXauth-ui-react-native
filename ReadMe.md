@@ -11,11 +11,11 @@ npm install webxauth-ui-react-native
 ## Usage
 
 ```js
-import { multiply } from 'webxauth-ui-react-native';
+import { multiply } from 'webxauth-ui-react-native'
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await multiply(3, 7)
 ```
 
 ## Contributing
