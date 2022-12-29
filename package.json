@@ -1,7 +1,7 @@
 {
   "name": "@webxauth/webxauth-ui-react-native",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "This TypeScript library is used within a vanilla React Native or Expo project to add web3 based authentication capabilities.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
