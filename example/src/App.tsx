@@ -3,12 +3,12 @@ import * as React from 'react'
 import { AuthWebView, WebViewMessage } from 'webxauth-ui-react-native'
 
 export default function App() {
-  /*
-   *    BEGIN _ WebView Methods
-   */
-  const onPostMessage = async (message: WebViewMessage) => {
-    console.log('App ::: onPostMessage ::: message', JSON.stringify(message))
 
+  const onPostMessage = async (message: WebViewMessage) => {
+    console.log('App ::: onPostMessage ::: message ::: stringified', JSON.stringify(message))
+
+    // Value determining within the AuthWebView component whether to continue
+    // to process callback data with onPostAction, onPostData or onPostMessage.
     return true
   }
 
@@ -17,8 +17,7 @@ export default function App() {
   }
 
   const onPostData = async (data: object) => {
-    const stringifiedData = JSON.stringify(data)
-    console.log('onPostData ::: stringifiedData', stringifiedData)
+    console.log('App ::: onPostData ::: data ::: stringified', JSON.stringify(data))
   }
 
   const onClickMetaMask = async () => {}
@@ -26,11 +25,8 @@ export default function App() {
   const onClickWalletConnect = async () => {}
 
   const onErrorAuthWebView = async (error: unknown) => {
-    console.log('error', error)
+    console.log('App ::: onErrorAuthWebView ::: error ::: stringified', JSON.stringify(error))
   }
-  /*
-   *    END _ WebView Methods
-   */
 
   return (
     <AuthWebView
