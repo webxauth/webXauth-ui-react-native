@@ -34,8 +34,7 @@
     "prepack": "bob build",
     "release": "release-it",
     "run:example:ios": "yarn --cwd example ios",
-    "run:example:android": "yarn --cwd example android",
-    "bootstrap": "yarn example && yarn install"
+    "run:example:android": "yarn --cwd example android"
   },
   "keywords": [
     "react-native",
