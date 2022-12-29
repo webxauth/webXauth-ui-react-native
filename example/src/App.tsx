@@ -1,9 +1,8 @@
 import * as React from 'react'
 
-import { AuthWebView, WebViewMessage } from '@webxauth/webxauth-ui-react-native';
+import { AuthWebView, WebViewMessage } from '@webxauth/webxauth-ui-react-native'
 
 export default function App() {
-
   const onPostMessage = async (message: WebViewMessage) => {
     console.log('App ::: onPostMessage ::: message ::: stringified', JSON.stringify(message))
 

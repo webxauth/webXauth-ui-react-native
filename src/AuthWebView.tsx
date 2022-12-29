@@ -2,13 +2,12 @@
  *    FRAMEWORK
  */
 import React, { useEffect, useMemo, useState } from 'react'
-import { ActivityIndicator, useWindowDimensions } from 'react-native'
-import { View } from 'react-native'
-import { Platform } from 'react-native'
+import { useWindowDimensions, Platform } from 'react-native'
 /*
  *    COMPONENTS
  */
 import WebView from 'react-native-webview'
+import { LoadingIndicator } from './components/LoadingIndicator'
 /*
  *    UTILS
  */
@@ -30,22 +29,6 @@ type AuthWebViewProps = {
   onError: (error: unknown) => Promise<void>
   dependencies: unknown[]
 }
-
-const LoadingIndicator = ({ height, width, backgroundColor }: any) => (
-  <View
-    style={[
-      {
-        alignItems: 'center',
-        justifyContent: 'center',
-        alignContent: 'center',
-        height,
-        width,
-        backgroundColor,
-      },
-    ]}>
-    <ActivityIndicator size='small' color='#FFA34E' />
-  </View>
-)
 
 const AuthWebView = ({
   delay,
@@ -75,13 +58,15 @@ const AuthWebView = ({
     onPostMessage,
     onError,
   }
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const messageBroker = useMemo(() => new MessageBroker(config), dependencies)
 
   const isfullyLoaded = isWebViewLoaded && !isDelaying
 
   useEffect(() => {
     setTimeout(() => setIsDelaying(false), delay)
-  }, [])
+  })
 
   return (
     <>
