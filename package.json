@@ -1,5 +1,6 @@
 {
   "name": "@webxauth/webxauth-ui-react-native",
+  "private": false,
   "version": "1.0.0",
   "description": "test",
   "main": "lib/commonjs/index",
