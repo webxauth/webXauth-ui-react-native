@@ -1,5 +1,5 @@
 {
-  "name": "@bonuz/webxauth-ui-react-native",
+  "name": "@webxauth/webxauth-ui-react-native",
   "version": "0.1.1",
   "description": "test",
   "main": "lib/commonjs/index",
@@ -44,18 +44,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/webXauth/webXauth-ui-react-native"
+    "url": "git+https://github.com/webXauth/webXauth-ui-react-native.git"
   },
   "author": "Bonuz",
   "contributors": [
-    {
-      "name": "Nabeel Iqbal",
-      "email": "nabeel@bonuz.market"
-    },
-    {
-      "name": "Oliver Molnar",
-      "email": "oliver.molnar@bonuz.market"
-    }
+    "Nabeel Iqbal <nabeel@bonuz.market>",
+    "Oliver Molnar <oliver.molnar@bonuz.market>"
   ],
   "license": "MIT",
   "bugs": {
@@ -173,5 +167,9 @@
   },
   "dependencies": {
     "react-native-webview": "^11.26.0"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }
