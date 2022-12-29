@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/@webxauth%2Fwebxauth-ui-react-native.svg)](https://badge.fury.io/js/@webxauth%2Fwebxauth-ui-react-native)
 # webxauth-ui-react-native
 
 This TypeScript library is used within a vanilla [**React Native**](https://reactnative.dev/) or [**Expo**](https://expo.dev/) project to add web3 based authentication capabilities.
