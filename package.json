@@ -1,6 +1,6 @@
 {
   "name": "@webxauth/webxauth-ui-react-native",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -101,7 +101,10 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "type-enum": [2, "always", ["config"]]
+    }
   },
   "release-it": {
     "git": {
