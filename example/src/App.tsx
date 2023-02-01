@@ -1,10 +1,27 @@
+/*
+ *     FRAMEWORK
+ */
 import * as React from 'react'
-
+/*
+ *     COMPONENTS - webxauth
+ */
 import { AuthWebView, WebViewMessage } from '@webxauth/webxauth-ui-react-native'
+/*
+ *     UTILS
+ */
+import { logAndAlert } from './util/log'
 
 export default function App() {
+  React.useEffect(() => {
+    console.log('App ::: Mounting')
+
+    return () => {
+      console.log('App ::: Unmounting')
+    }
+  }, [])
+
   const onPostMessage = async (message: WebViewMessage) => {
-    console.log('App ::: onPostMessage ::: message ::: stringified', JSON.stringify(message))
+    logAndAlert('App ::: onPostMessage ::: message ::: stringified' + JSON.stringify(message))
 
     // Value determining within the AuthWebView component whether to continue
     // to process callback data with onPostAction, onPostData or onPostMessage.
@@ -12,11 +29,11 @@ export default function App() {
   }
 
   const onPostAction = async (action: string) => {
-    console.log('App ::: onPostAction ::: action', action)
+    logAndAlert('App ::: onPostAction ::: action' + action)
   }
 
   const onPostData = async (data: object) => {
-    console.log('App ::: onPostData ::: data ::: stringified', JSON.stringify(data))
+    logAndAlert('App ::: onPostData ::: data ::: stringified' + JSON.stringify(data))
   }
 
   const onClickMetaMask = async () => {}
@@ -24,7 +41,7 @@ export default function App() {
   const onClickWalletConnect = async () => {}
 
   const onErrorAuthWebView = async (error: unknown) => {
-    console.log('App ::: onErrorAuthWebView ::: error ::: stringified', JSON.stringify(error))
+    logAndAlert('App ::: onErrorAuthWebView ::: error ::: stringified' + JSON.stringify(error))
   }
 
   return (
