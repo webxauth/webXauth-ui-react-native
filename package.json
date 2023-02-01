@@ -34,7 +34,9 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepack": "bob build",
     "release": "release-it",
+    "run:example:nodev": "yarn --cwd example start:nodev",
     "run:example:ios": "yarn --cwd example ios",
+    "run:example:ios:device": "yarn --cwd example ios:device",
     "run:example:android": "yarn --cwd example android"
   },
   "keywords": [
